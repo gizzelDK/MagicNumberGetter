@@ -1,0 +1,13 @@
+<Page navigatingTo="onNavigatingTo" xmlns="http://schemas.nativescript.org/tns.xsd">
+    
+    <ActionBar>
+        <Label text="Get number" />
+    </ActionBar>
+
+    <StackLayout>
+        <!-- Add your page content here -->
+        <Label id="lblGetNum" text="Get" />
+        <TextField id="tfGetNum" text="0" />
+        <Button id="btnSubmit" tap="deliverNum" text="Submit number" />
+    </StackLayout>
+</Page>

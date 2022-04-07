@@ -1,30 +1,20 @@
-<!--
-The markup in NativeScript apps contains a series of user interface components, each
-of which NativeScript renders with a platform-specific iOS or Android native control.
-You can find a full list of user interface components you can use in your app at
-https://docs.nativescript.org/ui/components.
--->
 <Page xmlns="http://schemas.nativescript.org/tns.xsd" navigatingTo="navigatingTo">
-    <!--
-    The ActionBar is the NativeScript common abstraction over the Android ActionBar and iOS NavigationBar.
-    http://docs.nativescript.org/ui/action-bar
-    -->
-    <ActionBar title="My App" icon="" />
 
-    <!--
-    The StackLayout stacks UI components on the screen—either vertically or horizontally.
-    In this case, the StackLayout does vertical stacking; you can change the stacking to
-    horizontal by applying a orientation="horizontal" attribute to the <StackLayout> element.
-    You can learn more about NativeScript layouts at
-    https://docs.nativescript.org/ui/layout-containers.
-
-    These components make use of the NativeScript core theme, which styles them with element selectors.
-    The theme also provides a set of helper class names such as p-20, h1, h2, and text-center to enhance styling.
-    You can learn more about the NativeScript core theme at https://github.com/nativescript/theme
-    -->
-    <StackLayout class="p-20">
-        <Label text="Tap the button" class="h1 text-center" />
-        <Button text="TAP" tap="{{ onTap }}" class="-primary" />
-        <Label text="{{ message }}" class="h2 text-center" textWrap="true" />
+    <ActionBar title="Magic Number Getter" icon="" />
+    <StackLayout>
+        <!-- Add your page content here -->
+        <Label text="Number One" />
+        <Label id="labelOne" text="{{numOne}}" />
+        <Button id="btnGetNumOne" tap="goGetNumOne" text="Get first number" />
+        <Label text="Number Two" />
+        <Label id="labelTwo" text="{{numTwo}}" />
+        <Button id="btnGetNumTwo" tap="goGetNumTwo" text="Get second number" />
+        <StackLayout orientation="horizontal">
+            <Button id="add" text="add" tap="{{ add }}" />
+            <Button id="sub" text="sub" tap="{{ sub }}" />
+            <Button id="mul" text="mul" tap="{{ mul }}" />
+            <Button id="div" text="div" tap="{{ div }}" />
+        </StackLayout>
+        <Label id="resultat"  class="h2 text-center" text="{{ resultat }}" />
     </StackLayout>
 </Page>

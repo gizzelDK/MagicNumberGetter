@@ -1,7 +1,7 @@
 import { NativeScriptConfig } from '@nativescript/core';
 
 export default {
-  id: 'org.nativescript.AotherTest',
+  id: 'org.nativescript.MagicNumberGetter',
   appPath: 'app',
   appResourcesPath: 'App_Resources',
   android: {
