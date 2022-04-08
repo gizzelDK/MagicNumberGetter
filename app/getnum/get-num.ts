@@ -16,5 +16,12 @@ export function onNavigatingTo(args: NavigatedData) {
   export function deliverNum(args: EventData){
     tfGetNum = page.getViewById('tfGetNum')
     myData.theNum = tfGetNum.text
-    page.frame.goBack()
+    var navigationOptions ={
+      moduleName: 'main-page',
+      context:{
+        data: myData
+      }
+    }
+    Frame.topmost().navigate(navigationOptions)
+    //page.frame.goBack()
   }

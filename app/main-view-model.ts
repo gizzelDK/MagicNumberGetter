@@ -50,8 +50,19 @@ public set md(v : MyData) {
     this.resultat= 0
   }
 
-  goGetNumOne(requestedNum: string){
-      this.md.numRequest = requestedNum
+  public goGetNumOne(args: EventData){
+    console.log('goGetNumOne Fired')
+      this.md.numRequest = 'One'
+      var navigationOptions ={
+        moduleName: 'getnum/get-num',
+        context:{
+          data: this._md
+        }
+      }
+      Frame.topmost().navigate(navigationOptions)
+  }
+  goGetNumTwo(args: EventData){
+      this.md.numRequest = 'Two'
       var navigationOptions ={
         moduleName: 'getnum/get-num',
         context:{

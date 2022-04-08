@@ -5,10 +5,10 @@
         <!-- Add your page content here -->
         <Label text="Number One" />
         <Label id="labelOne" text="{{numOne}}" />
-        <Button id="btnGetNumOne" tap="goGetNumOne" text="Get first number" />
+        <Button id="btnGetNumOne" tap="{{goGetNumOne}}" text="Get first number" />
         <Label text="Number Two" />
         <Label id="labelTwo" text="{{numTwo}}" />
-        <Button id="btnGetNumTwo" tap="goGetNumTwo" text="Get second number" />
+        <Button id="btnGetNumTwo" tap="{{goGetNumTwo}}" text="Get second number" />
         <StackLayout orientation="horizontal">
             <Button id="add" text="add" tap="{{ add }}" />
             <Button id="sub" text="sub" tap="{{ sub }}" />

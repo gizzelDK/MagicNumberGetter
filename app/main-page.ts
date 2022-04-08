@@ -5,17 +5,19 @@ import { MyData } from './MyData'
 var page: Page
 var vm: MainViewModel
 var myData: MyData
+
+vm = new MainViewModel()
+page.bindingContext = vm
+
 export function navigatingTo(args: NavigatedData) {
 
    page = <Page>args.object
+   console.log(page.navigationContext)
    if(page.navigationContext?.data != undefined){
      myData = page.navigationContext.data
+     console.log(myData)
    }
 
-  if (!args.isBackNavigation) {
-    vm = new MainViewModel()
-    page.bindingContext = vm
-  }
   if (myData?.numRequest === 'One') {
     vm.numOne = parseInt(myData.theNum)
   }
